@@ -11,6 +11,7 @@ let options = {
 function scrollAnimation(entries) {
     entries.forEach((entry) => {
         entry.target.classList.toggle("show", entry.isIntersecting);
+        console.log(entry);
         if (entry.isIntersecting) observer.unobserve(entry.target);
     });
 }
@@ -40,9 +41,11 @@ const mainSectionWrapper = document.querySelector(".main-section-wrapper");
 function loadNewSection() {
     for (let i = 0; i < 10; i++) {
         const section = document.createElement("section");
-        const h1 = document.createElement("h1");
-        h1.textContent = "New Section for Testing!";
-        section.append(h1);
+        const h2 = document.createElement("h2");
+        h2.textContent = `New Section for Testing!
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit ullam facilis nesciunt vel totam quia eaque voluptas, 
+        praesentium asperiores accusantium.`;
+        section.append(h2);
         section.classList.add("main-section");
         observer.observe(section);
         mainSectionWrapper.append(section);
