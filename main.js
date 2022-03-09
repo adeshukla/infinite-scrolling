@@ -5,7 +5,7 @@ const sectionWrapper = document.querySelectorAll(
 );
 
 let options = {
-    threshold: 1,
+    threshold: 0.5,
 };
 
 function scrollAnimation(entries) {
