@@ -11,7 +11,6 @@ let options = {
 function scrollAnimation(entries) {
     entries.forEach((entry) => {
         entry.target.classList.toggle("show", entry.isIntersecting);
-        console.log(entry);
         if (entry.isIntersecting) observer.unobserve(entry.target);
     });
 }
